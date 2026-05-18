@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <title>Disney Princesses: an enchanted journey continues</title>
+    <link rel="stylesheet" href="/css/dlc_gamestyle.css"> 
+    <link rel="script" href="/js/dlc_gamescript.js">
+</head>
+<body>
+    <a-scene>
+        <a-sky color="#DDDDDD"></a-sky>
+        <a-box position="0.5 0.5 -3" rotation="0 10 0" color="#F20670"></a-box>
+        <a-entity
+        geometry="
+            primitive: torus;
+            radius: 1;
+            radiusTubular: 0.1;
+            segmentsTubular: 12;"
+            
+        material="
+            color:#F20670;
+            roughness: 0.1;
+            metalness: 0.5;"
+        rotation="10 0 0"
+        position="-3 1 0">
+        </a-entity>
+
+        <a-camera
+             position="0 1 4"
+             cursor-visible="true"
+             cursor-scale="2"
+             cursor-color="#0095DD"
+             cursor-opacity="0.5">
+        </a-camera>
+    </a-scene>
+</body>
+</html>
