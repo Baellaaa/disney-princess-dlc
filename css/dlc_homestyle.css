@@ -3,6 +3,18 @@
 
     margin: 0;
     padding: 0;
+    /* background-image: linear-gradient(#E3C6DA, #F1BDD5, #E894BF, #ED61A4, #F20670);
+    background-repeat: no-repeat; */
+}
+
+.content_container {
     background-image: linear-gradient(#E3C6DA, #F1BDD5, #E894BF, #ED61A4, #F20670);
     background-repeat: no-repeat;
+}
+
+.button_originalgame {
+    width: 30px;
+    height: auto;
+    max-height: 10px;
+    background-color: #EDD30E;
 }
