@@ -10,14 +10,41 @@
 </head>
 <body>
     <a-scene>
-        <a-sky color="#DDDDDD"></a-sky>
-        <a-box 
-        position="0.5 0.5 -3" 
-        rotation="0 10 0" 
-        color="#F20670"
-        animation="property: rotation; from: 20 0 0; to: 20 360 0; dir: alternate;
-        loop: true; dur: 4000; easing: easeInOutQuad;">
-        </a-box>
+        <a-assets>
+            <a-asset-item id="forest" src="/assets/forest_clearing.glb"></a-asset-item>
+            <a-asset-item id="raspberry_mg" src=""></a-asset-item>
+        </a-assets>
+        <a-entity
+            gltf-model="#forest"
+            position="0 0 -5"
+            scale="0.5 0.5 0.5">
+        </a-entity>
+        
+        <div class="sketchfab-embed-wrapper"> 
+            <iframe title="Magnetic Berry" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/c75fa1fccef44761968b9bf7f1bc753b/embed?camera=0&transparent=1"> 
+
+            </iframe> 
+                <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> 
+                        <a href="https://sketchfab.com/3d-models/magnetic-berry-c75fa1fccef44761968b9bf7f1bc753b?utm_medium=embed&utm_campaign=share-popup&utm_content=c75fa1fccef44761968b9bf7f1bc753b" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Magnetic Berry </a>
+                     by <a href="https://sketchfab.com/srikanthsamba?utm_medium=embed&utm_campaign=share-popup&utm_content=c75fa1fccef44761968b9bf7f1bc753b" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> srikanthsamba </a>
+                     on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=c75fa1fccef44761968b9bf7f1bc753b" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Sketchfab</a>
+                </p>
+        </div>
+
+        <a-sphere
+            id="berry_picking_mg"
+            position="3 1 -4"
+            radius="1"
+            color="yellow">
+        </a-sphere>
+        
+        <a-entity
+            class="creature"
+            position="5 0 -10">
+        </a-entity>
+
+        <a-cylinder id="bucket" position="0 1 -5" radius="0.5" height="1" color="#8B4513"></a-cylinder>
+
         <a-entity
         geometry="
             primitive: torus;
@@ -34,6 +61,12 @@
         animation="property: scale; to: 1 0.5 1; direction: alternate; dur: 2000;
         loop: true; easing: linear;">
         </a-entity>
+
+        <a-entity
+            class="spinning-wheel">
+        </a-entity>
+
+        <a-entity id="thornBridge"></a-entity>
 
         <a-camera
              position="0 1 4"
