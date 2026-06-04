@@ -12,7 +12,8 @@
     <a-scene>
         <a-assets>
             <a-asset-item id="forest" src="/assets/forest_clearing.glb"></a-asset-item>
-            <a-asset-item id="raspberry_mg" src=""></a-asset-item>
+            <a-asset-item id="raspberry_mg" src="/assets/red_berries.glb"></a-asset-item>
+            <a-asset-item id="strawberry_mg" src="/assets/strawberry.glb"></a-asset-item>
         </a-assets>
         <a-entity
             gltf-model="#forest"
@@ -31,6 +32,12 @@
                 </p>
         </div>
 
+
+        <a-entity 
+            gltf-model="#strawberry_mg"
+            position="-2 0 -3"
+            scale="0.5 0.5 0.5">
+        </a-entity>
         <a-sphere
             id="berry_picking_mg"
             position="3 1 -4"
