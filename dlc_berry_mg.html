@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Catch the Berries</title>
+    <link rel="stylesheet" href="/css/dlc_berrrygame.css">
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+</head>
+<body>
+    <div id="ui">
+        <button id="start">Start</button>
+        <p>
+            Score: 
+            <span id="score">0</span>
+        </p>
+    </div>
+
+    <a-scene embedded>
+
+        <a-assets>
+
+            <img
+                id="forestBg"
+                src="/assets/berrry_mg_bgi.jpg">
+
+            <a-asset-item
+                id="berryModel"
+                src="/assets/strawberry.glb">
+            </a-asset-item>
+
+            <a-asset-item
+                id="basketModel"
+                src="/assets/basket.glb">
+            </a-asset-item>
+
+        </a-assets>
+
+        <a-sky src="#forestBg"></a-sky>
+
+        <!-- <a-plane
+            src="#forestBg"
+            position="0 0 -10"
+            width="20"
+            height="12"
+            material="shader: flat">
+        </a-plane> -->
+
+        <a-entity
+            id="berry"
+            gltf-model="#berryModel"
+            position="0 3 -3"
+            scale="0.2 0.2 0.2">
+        </a-entity>
+
+        <a-entity
+            id="basket"
+            gltf-model="#basketModel"
+            position="0 -1 -3"
+            scale="0.7 0.7 0.7">
+        </a-entity>
+
+        <a-entity id="cameraRig">
+            <a-camera position="0 1.5 2" wasd-controls="enabled: false"></a-camera>
+        </a-entity>
+
+    </a-scene>
+
+    <script src="/js/dlc_berrygame.js"></script>
+
+</body>
+</html>

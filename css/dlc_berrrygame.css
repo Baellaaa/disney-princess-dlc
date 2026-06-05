@@ -1,0 +1,46 @@
+/* #gameArea {
+    position: relative;
+    width: 1200px;
+    height: 675px;
+    overflow: hidden;
+} */
+
+body {
+    margin: 0;
+}
+
+a-scene {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 1;
+}
+
+#ui {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+    pointer-events: auto;
+}
+
+/* #berry {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: red;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+}
+
+#basket {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    background: brown;
+    bottom: 10px;
+    left: 250px;
+} */
